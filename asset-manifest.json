@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/RockPaperScissors/static/css/main.ba9ade94.css",
+    "main.js": "/RockPaperScissors/static/js/main.2bd821ad.js",
+    "static/js/787.15230f2c.chunk.js": "/RockPaperScissors/static/js/787.15230f2c.chunk.js",
+    "static/media/rpsTheme.mp3": "/RockPaperScissors/static/media/rpsTheme.736ba7679f295736dcd1.mp3",
+    "static/media/rpsStageTwo.gif": "/RockPaperScissors/static/media/rpsStageTwo.8ca160a5ffe203f89c13.gif",
+    "static/media/gameOverBG.gif": "/RockPaperScissors/static/media/gameOverBG.45306cf81637023777e8.gif",
+    "static/media/rpsStageFour.gif": "/RockPaperScissors/static/media/rpsStageFour.87cc1062f844a793175d.gif",
+    "static/media/rock-icon.png": "/RockPaperScissors/static/media/rock-icon.e08e6e7299ab0052bfa4.png",
+    "static/media/scissors-icon.png": "/RockPaperScissors/static/media/scissors-icon.c5350da8cbdc151f9e11.png",
+    "static/media/megaManDamage.gif": "/RockPaperScissors/static/media/megaManDamage.cd958d19b95851b3bf76.gif",
+    "static/media/megaManShoot.gif": "/RockPaperScissors/static/media/megaManShoot.329dab676f2b2ba49ed7.gif",
+    "static/media/megaManTie.gif": "/RockPaperScissors/static/media/megaManTie.2030dcfb5365c843db97.gif",
+    "static/media/paper-icon.png": "/RockPaperScissors/static/media/paper-icon.82c091c03d9b7f22d2fd.png",
+    "index.html": "/RockPaperScissors/index.html",
+    "main.ba9ade94.css.map": "/RockPaperScissors/static/css/main.ba9ade94.css.map",
+    "main.2bd821ad.js.map": "/RockPaperScissors/static/js/main.2bd821ad.js.map",
+    "787.15230f2c.chunk.js.map": "/RockPaperScissors/static/js/787.15230f2c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba9ade94.css",
+    "static/js/main.2bd821ad.js"
+  ]
+}
