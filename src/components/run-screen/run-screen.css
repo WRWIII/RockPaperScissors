@@ -152,7 +152,12 @@ width: 100%;
   
 .shake {
 animation: shake 0.2s;
+height: 100vh;
 background-image: url('../componentIMG/rpsStageTwo.gif');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+position: relative;
 }
 
 .controller {
