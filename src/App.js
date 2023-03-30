@@ -13,9 +13,9 @@ function App() {
   }, [])
 
   return (
-    <div className="container-fluid">
+    <>
      {runGame && <StartScreen />}
-    </div>
+     </>
   );
 }
 

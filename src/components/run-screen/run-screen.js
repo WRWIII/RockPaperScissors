@@ -183,7 +183,7 @@ const RunScreen = () => {
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <button className='mute-btn btn btn-outline-primary btn-sm' onClick={handleMuteBtn}>{isMuted ? <i class="fas fa-volume-up"></i> : <i class="fas fa-volume-mute"></i>}</button>
+                <button className='mute-btn btn btn-outline-primary btn' onClick={handleMuteBtn}>{isMuted ? <i class="fas fa-volume-up"></i> : <i class="fas fa-volume-mute"></i>}</button>
                 {/* <button className='audio-btn' onClick={handleAudioButton}>AUDIO</button> */}
                 {!gameOver ? (
                     // Controller
@@ -195,8 +195,10 @@ const RunScreen = () => {
                                 <div className='col-4'><button className='rps btn' id='scissors' onClick={() => rpsMatch('scissors')}></button></div>
                             </div>
                         </div>
-                        <div className="gif-container">
-                            <img src={battleGIF} className='battle-gif' alt="Your GIF" />
+                        <div className='row'>
+                            <div className="gif-container">
+                                <img src={battleGIF} className='battle-gif' alt="Your GIF" />
+                            </div>
                         </div>
                     </>
                 ) : (

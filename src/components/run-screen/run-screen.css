@@ -88,7 +88,6 @@
 }
 
 #rock {
-  display: inline-block;
   padding: 40px 64px;
   background-color: #8e5f5f;
   border: none;
@@ -102,7 +101,6 @@
 }
 
 #paper {
-  display: inline-block;
   padding: 40px 64px;
   background-color: #1675b8;
   border: none;
@@ -116,7 +114,6 @@
 }
 
 #scissors {
-  display: inline-block;
   padding: 40px 64px;
   background-color: #e8d500;
   border: none;
@@ -177,12 +174,6 @@
   background-size: cover;
   background-position: center center;
   position: relative;
-}
-
-.controller {
-  position: fixed;
-  bottom: 0;
-  z-index: 10;
 }
 
 /* All heavy key frame animations are sourced from Animista */
@@ -277,13 +268,27 @@
 .gif-container {
   position: fixed;
   top: 70%;
+  bottom: 30%;
   left: 50%;
+  right: 50%;
   transform: translate(-50%, -50%);
 }
 
 .battle-gif {
+  position: fixed;
+  top: 70%;
+  bottom: 30%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
   height: 200px;
   width: 320px;
+}
+
+.controller {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
 }
 
 /* .audio-controls {

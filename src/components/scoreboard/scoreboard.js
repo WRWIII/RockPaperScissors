@@ -33,7 +33,7 @@ const Scoreboard = ({ score, scoreList, matchDecision }) => {
   const limitedScoreList = sortedScoreList.slice(0, 5);
 
   return (
-    <div className='container'>
+    <>
       <h2 className='match-decision'>{matchDecision}</h2>
       <div className='row'>
         <h3 className='player-result'>{playerResult * 1000}</h3>
@@ -64,7 +64,7 @@ const Scoreboard = ({ score, scoreList, matchDecision }) => {
           </form>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
