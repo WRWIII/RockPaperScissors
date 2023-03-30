@@ -13,7 +13,7 @@ function App() {
   }, [])
 
   return (
-    <div className="constainer-fluid">
+    <div className="container-fluid">
      {runGame && <StartScreen />}
     </div>
   );

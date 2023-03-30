@@ -62,7 +62,6 @@ const RunScreen = () => {
             timerRef.current = setInterval(() => {
                 setTimer(prevTime => prevTime - 1);
             }, 1000);
-            console.log('render')
             handleMusicPlayer();
             return () => {
                 clearInterval(timerRef.current);
