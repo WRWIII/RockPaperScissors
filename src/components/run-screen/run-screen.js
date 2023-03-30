@@ -195,10 +195,8 @@ const RunScreen = () => {
                             <div className='col-4'><button className='rps btn' id='scissors' onClick={() => rpsMatch('scissors')}></button></div>
                         </div>
                     </div>
-                    <div className='row'>
                     <div className="gif-container">
                     <img src={battleGIF} className='battle-gif' alt="Your GIF" />
-                    </div>
                     </div>
                     </>
                 ) : ( 
