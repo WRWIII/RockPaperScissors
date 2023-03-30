@@ -17,6 +17,7 @@ const RunScreen = () => {
     const [hit, setHit] = useState(false);
     const [remtachEnable, setRematchEnable] = useState(false);
     const [musicPlayer, setMusicPlayer] = useState(false);
+    //Left in if future audio button desired more function
     // const [showAudioControls, setShowAudioControls] = useState('hidden-audio-controls');
     const [isMuted, setIsMuted] = useState(false);
     const [battleGIF, setBattleGIF] = useState(tieGIF);
@@ -31,11 +32,11 @@ const RunScreen = () => {
     function handleMusicPlayer() {
         const rpsMusic = document.getElementById('audio-player');
         setMusicPlayer(true);
-        if(musicPlayer === true) {
+        if (musicPlayer === true) {
             rpsMusic.play();
         }
     }
-
+    //Left in for possible future audio function
     // function handleAudioButton() {
     //     if(showAudioControls === 'hidden-audio-controls') {
     //         setShowAudioControls('audio-controls');
@@ -45,9 +46,9 @@ const RunScreen = () => {
     // }
 
     function handleMuteBtn() {
-        if(audioRef.current) {
+        if (audioRef.current) {
             audioRef.current.muted = !audioRef.current.muted;
-      setIsMuted(audioRef.current.muted);
+            setIsMuted(audioRef.current.muted);
         }
     }
 
@@ -57,16 +58,16 @@ const RunScreen = () => {
             clearInterval(timerRef.current);
             setGameOver(true);
             handleRematchButton();
-        }else {
-            timerRef.current = setInterval(() =>{
+        } else {
+            timerRef.current = setInterval(() => {
                 setTimer(prevTime => prevTime - 1);
-            }, 1000);  
+            }, 1000);
             console.log('render')
-        handleMusicPlayer();
-        return () => {
-            clearInterval(timerRef.current);
+            handleMusicPlayer();
+            return () => {
+                clearInterval(timerRef.current);
+            }
         }
-        } 
     }, [timer]);
 
     ///Commentary arrays
@@ -100,16 +101,16 @@ const RunScreen = () => {
     let randomTieIndex = Math.floor(Math.random() * fightTieComment.length);
     let randomTieComment = fightTieComment[randomTieIndex];
 
-    
+
     ///match LOGIC && damage triggger && comment trigger
     const moves = ['rock', 'paper', 'scissors'];
     const rpsMatch = (playerMove) => {
         const cpuMove = moves[Math.floor(Math.random() * 3)];
 
-        if(playerMove === cpuMove) {
+        if (playerMove === cpuMove) {
             setGameResult(<h5 className='tie-comment'>{randomTieComment}</h5>)
             setBattleGIF(tieGIF);
-        } else if(
+        } else if (
             (playerMove === 'rock' && cpuMove === 'scissors') ||
             (playerMove === 'paper' && cpuMove === 'rock') ||
             (playerMove === 'scissors' && cpuMove === 'paper')
@@ -129,7 +130,7 @@ const RunScreen = () => {
     function handleDamage() {
         setDamage(true);
         setTimeout(() => {
-        setDamage(false);
+            setDamage(false);
         }, 1000);
     }
 
@@ -139,20 +140,20 @@ const RunScreen = () => {
             setHit(false);
         }, 1000)
     }
-    
+
     let matchDecision = '';
-    if(playerScore > cpuScore) {
+    if (playerScore > cpuScore) {
         matchDecision = "YOU WIN!!!";
     } else if (playerScore < cpuScore) {
         matchDecision = "YOU LOSE!";
-      } else {
+    } else {
         matchDecision = "DRAW!";
     }
 
     ///rematch Btn
     function handleRematchButton() {
         setTimeout(() => {
-           setRematchEnable(true) 
+            setRematchEnable(true)
         }, 2000)
     }
 
@@ -168,55 +169,52 @@ const RunScreen = () => {
 
     return (
         <div className={damage ? 'runScreenBGImage shake' : 'runScreenBGImage'}>
-            <div className='container'>    
-            {/* Scores and Timer */}
-                    <div className="battleCommentary">{timer > 0 && gameResult}</div>    
-                        <div className={damage ? "score playerScore playerHit" : "score playerScore"}>Player: {playerScore}</div>
-                        <div className={hit ? 'score cpuScore playerHit' : 'score cpuScore'}>CPU: {cpuScore}</div>
+            <div className='container'>
+                {/* Scores and Timer */}
+                <div className="battleCommentary">{timer > 0 && gameResult}</div>
+                <div className={damage ? "score playerScore playerHit" : "score playerScore"}>Player: {playerScore}</div>
+                <div className={hit ? 'score cpuScore playerHit' : 'score cpuScore'}>CPU: {cpuScore}</div>
                 <div className='row'>
                     <h1 className="gameTimer display-1 ">{timer === 0 ? 'Game Over' : `${timer}`}</h1>
                 </div>
-            {/* Audio */}
+                {/* Audio */}
                 <div className='hidden-audio-controls'>
                     <audio ref={audioRef} preload="true" id='audio-player' loop>
-                    <source src={music} type="audio/mpeg" />
-                    Your browser does not support the audio element.
+                        <source src={music} type="audio/mpeg" />
+                        Your browser does not support the audio element.
                     </audio>
-                </div>  
+                </div>
                 <button className='mute-btn btn btn-outline-primary btn-sm' onClick={handleMuteBtn}>{isMuted ? <i class="fas fa-volume-up"></i> : <i class="fas fa-volume-mute"></i>}</button>
                 {/* <button className='audio-btn' onClick={handleAudioButton}>AUDIO</button> */}
-                {!gameOver ?  (
+                {!gameOver ? (
                     // Controller
                     <>
-                    <div className='row'>
-                        <div className='controller btn-group'>
-                            <div className='col-4'><button className='rps btn' id='rock' onClick={() => rpsMatch('rock')}></button></div>
-                            <div className='col-4'><button className='rps btn' id='paper' onClick={() => rpsMatch('paper')}></button></div>
-                            <div className='col-4'><button className='rps btn' id='scissors' onClick={() => rpsMatch('scissors')}></button></div>
+                        <div className='row'>
+                            <div className='controller btn-group'>
+                                <div className='col-4'><button className='rps btn' id='rock' onClick={() => rpsMatch('rock')}></button></div>
+                                <div className='col-4'><button className='rps btn' id='paper' onClick={() => rpsMatch('paper')}></button></div>
+                                <div className='col-4'><button className='rps btn' id='scissors' onClick={() => rpsMatch('scissors')}></button></div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="gif-container">
-                    <img src={battleGIF} className='battle-gif' alt="Your GIF" />
-                    </div>
+                        <div className="gif-container">
+                            <img src={battleGIF} className='battle-gif' alt="Your GIF" />
+                        </div>
                     </>
-                ) : ( 
+                ) : (
                     <>
-                    { <Scoreboard score={playerScore} scoreList={scoreList} matchDecision={matchDecision} />}
-                    {!remtachEnable ? (
-                        <></>
-                    ) : (
-                        // Rematch Button
-                       
-                            <button className='btn btn-lg btn-block rematch-button' onClick={handleRematch}>Rematch?</button>   
-                     
-                    )}
+                        {<Scoreboard score={playerScore} scoreList={scoreList} matchDecision={matchDecision} />}
+                        {!remtachEnable ? (
+                            <></>
+                        ) : (
+                            // Rematch Button
+
+                            <button className='btn btn-lg btn-block rematch-button' onClick={handleRematch}>Rematch?</button>
+
+                        )}
                     </>
                 )}
-                
             </div>
-
         </div>
-       
     );
 };
 

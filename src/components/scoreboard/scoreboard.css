@@ -1,14 +1,14 @@
 .match-decision {
     text-align: center;
     font-size: 33px;
-    animation: startButtonTextInitial .5s infinite ;
+    animation: startButtonTextInitial .5s infinite;
     color: antiquewhite;
     background-color: rgb(6, 171, 155, 0.5);
 }
 
 .player-result {
     text-align: center;
-    font-size: 55px;  
+    font-size: 55px;
     color: #ae06b1;
     background-color: rgba(245, 245, 245, 0.2);
     border-radius: 30px;
@@ -16,7 +16,6 @@
 
 .name-input {
     z-index: 10;
-
 }
 
 .highScoreTable {
@@ -25,23 +24,24 @@
     z-index: 1;
 }
 
-th, td {
-border: 5px double #998b8b;
-padding: 8px;
+th,
+td {
+    border: 5px double #998b8b;
+    padding: 8px;
 }
 
 th {
-background-color: #f9d247;
-text-transform: uppercase;
-font-family: 'Press Start 2P', cursive;
-font-size: 14px;
-letter-spacing: 2px;
-text-align: left;
+    background-color: #f9d247;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: left;
 }
 
 td {
-background-color: #fff;
-font-family: 'Press Start 2P', cursive;
-font-size: 14px;
-text-align: left;
+    background-color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    text-align: left;
 }

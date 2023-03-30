@@ -1,19 +1,19 @@
 .runScreenBGImage {
-    height: 100vh;
-    background-image: url('../componentIMG/rpsStageFour.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
+  height: 100vh;
+  background-image: url('../componentIMG/rpsStageFour.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
 }
 
-.score{
+.score {
   position: absolute;
   font-size: 24px;
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 15px;
-  background-color: rgba(254, 211, 69, 0.5); 
+  background-color: rgba(254, 211, 69, 0.5);
   padding: 5px 10px;
 }
 
@@ -24,10 +24,10 @@
 }
 
 .gameTimer {
-    margin-top: 70px;
-    text-align: center;
-    /* animation: startButtonTextInitial .5s infinite ; */
-    color: rgb(84, 188, 233);
+  margin-top: 70px;
+  text-align: center;
+  /* animation: startButtonTextInitial .5s infinite ; */
+  color: rgb(84, 188, 233);
 }
 
 .cpuScore {
@@ -37,38 +37,40 @@
 }
 
 @keyframes buttonBlink {
-    0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .battleCommentary {
-    position: absolute;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    height: 60px;
-    line-height: 1.5;
-    margin: auto;
+  position: absolute;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: 60px;
+  line-height: 1.5;
+  margin: auto;
 }
 
 .tie-comment {
-    animation: buttonBlink .2s infinite;
+  animation: buttonBlink .2s infinite;
 }
 
 .rps {
-    font-size: 20px;
-    position: relative;
+  font-size: 20px;
+  position: relative;
   display: inline-block;
   padding: 10px 20px;
   background-color: #00bfff;
@@ -77,12 +79,12 @@
 }
 
 .rps:hover {
-    background-color: rgb(240, 255, 255);
-    opacity: 80%;
+  background-color: rgb(240, 255, 255);
+  opacity: 80%;
 }
 
 .rps:active {
-    transform: scale(0.80);
+  transform: scale(0.80);
 }
 
 #rock {
@@ -100,39 +102,39 @@
 }
 
 #paper {
-    display: inline-block;
-    padding: 40px 64px;
-    background-color: #1675b8;
-    border: none;
-    border-radius: 5px;
-    background-image: url('../componentIMG/paper-icon.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70%;
-    box-shadow: 0 0 30px #ffffff;
-    transition: box-shadow 0.3s ease-in-out;
+  display: inline-block;
+  padding: 40px 64px;
+  background-color: #1675b8;
+  border: none;
+  border-radius: 5px;
+  background-image: url('../componentIMG/paper-icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  box-shadow: 0 0 30px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 #scissors {
-    display: inline-block;
-    padding: 40px 64px;
-    background-color: #e8d500;
-    border: none;
-    border-radius: 5px;
-    background-image: url('../componentIMG/scissors-icon.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70%;
-    box-shadow: 0 0 30px #be008c;
-    transition: box-shadow 0.3s ease-in-out;
+  display: inline-block;
+  padding: 40px 64px;
+  background-color: #e8d500;
+  border: none;
+  border-radius: 5px;
+  background-image: url('../componentIMG/scissors-icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  box-shadow: 0 0 30px #be008c;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .rematch-button {
-background-color: rgb(201, 255, 255);
-position: fixed;
-bottom: 0;
-left: 0;
-width: 100%;
+  background-color: rgb(201, 255, 255);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .rematch-button:hover {
@@ -142,105 +144,134 @@ width: 100%;
 
 /* damage animation */
 @keyframes shake {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(-10px); }
-    40% { transform: translateX(10px); }
-    60% { transform: translateX(-10px); }
-    80% { transform: translateX(10px); }
-    100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  60% {
+    transform: translateX(-10px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
-  
+
 .shake {
-animation: shake 0.2s;
-height: 100vh;
-background-image: url('../componentIMG/rpsStageTwo.gif');
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center center;
-position: relative;
+  animation: shake 0.2s;
+  height: 100vh;
+  background-image: url('../componentIMG/rpsStageTwo.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
 }
 
 .controller {
-    position: fixed;
-    bottom: 0;
-    z-index: 10;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
 }
 
 /* All heavy key frame animations are sourced from Animista */
 
 @keyframes playerHit {
-    0% {
-      transform: translate(0);
-    }
-    10% {
-      transform: translate(-2px, -2px);
-    }
-    20% {
-      transform: translate(2px, -2px);
-    }
-    30% {
-      transform: translate(-2px, 2px);
-    }
-    40% {
-      transform: translate(2px, 2px);
-    }
-    50% {
-      transform: translate(-2px, -2px);
-    }
-    60% {
-      transform: translate(2px, -2px);
-    }
-    70% {
-      transform: translate(-2px, 2px);
-    }
-    80% {
-      transform: translate(-2px, -2px);
-    }
-    90% {
-      transform: translate(2px, -2px);
-    }
-    100% {
-      transform: translate(0);
-    }
+  0% {
+    transform: translate(0);
   }
 
+  10% {
+    transform: translate(-2px, -2px);
+  }
+
+  20% {
+    transform: translate(2px, -2px);
+  }
+
+  30% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(2px, 2px);
+  }
+
+  50% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, -2px);
+  }
+
+  70% {
+    transform: translate(-2px, 2px);
+  }
+
+  80% {
+    transform: translate(-2px, -2px);
+  }
+
+  90% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
 .playerHit {
-	animation: playerHit 0.5s linear infinite both;
+  animation: playerHit 0.5s linear infinite both;
 }
-  
+
 @keyframes playerAttackHit {
-    0% {
-      transform: translateY(0);
-      transform-origin: 50% 50%;
-      text-shadow: none;
-    }
-    100% {
-      transform: translateY(-50px);
-      transform-origin: 50% 50%;
-      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-    }
+  0% {
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+
+  100% {
+    transform: translateY(-50px);
+    transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
 }
-  
-    
+
+
 .playerAttackHit {
-	animation: playerAttackHit 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+  animation: playerAttackHit 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
 }
-  
+
 .cpuAttackHit {
-    animation: cpuAttackHit 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: cpuAttackHit 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes cpuAttackHit {
-    0% {
-        transform: translateX(800px) rotateY(30deg) scale(6.5);
-        transform-origin: -100% 50%;
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0) rotateY(0) scale(1);
-        transform-origin: 600px 50%;
-        opacity: 1;
-      }
+  0% {
+    transform: translateX(800px) rotateY(30deg) scale(6.5);
+    transform-origin: -100% 50%;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotateY(0) scale(1);
+    transform-origin: 600px 50%;
+    opacity: 1;
+  }
 }
 
 .gif-container {
@@ -277,7 +308,7 @@ position: relative;
 }
 
 .mute-btn {
-  position:fixed;
+  position: fixed;
   right: 0;
   top: 20%;
   transform: translateY(-80%);
