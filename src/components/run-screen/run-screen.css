@@ -156,10 +156,12 @@ background-image: url('../componentIMG/rpsStageTwo.gif');
 }
 
 .controller {
-    position: absolute;
-    bottom: 20px;
+    position: fixed;
+    bottom: 0;
     z-index: 10;
 }
+
+/* All heavy key frame animations are sourced from Animista */
 
 @keyframes playerHit {
     0% {
