@@ -153,13 +153,13 @@ const RunScreen = () => {
     function handleRematchButton() {
         setTimeout(() => {
            setRematchEnable(true) 
-        },2000)
+        }, 2000)
     }
 
     const handleRematch = () => {
         setPlayerScore(0);
         setCpuScore(0);
-        setTimer(5);
+        setTimer(30);
         setGameResult('');
         setGameOver(false);
         setRematchEnable(false);
