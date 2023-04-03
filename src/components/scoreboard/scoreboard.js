@@ -6,7 +6,7 @@ const Scoreboard = ({ score, scoreList, matchDecision }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [playerResult, setPlayerResult] = useState(0);
 
-  //Main Scoreboard Hook
+  //End score counting animation
   useEffect(() => {
     let interval;
     if (playerResult < score) {
@@ -24,8 +24,9 @@ const Scoreboard = ({ score, scoreList, matchDecision }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    scoreList.push({ name: newName, score });
+    scoreList.push({ name: newName, score, match: matchDecision });
     setNewName('');
+    console.log(scoreList);
     setFormSubmitted(true);
   };
   //Sort and limit to 5 for high scores
@@ -43,6 +44,7 @@ const Scoreboard = ({ score, scoreList, matchDecision }) => {
           <tr>
             <th>CHAMPIONS</th>
             <th>TOTAL POINTS</th>
+            <th>WIN, LOSS, OR TIE</th>
           </tr>
         </thead>
         <tbody>
@@ -50,6 +52,7 @@ const Scoreboard = ({ score, scoreList, matchDecision }) => {
             <tr key={index}>
               <td>{score.name}</td>
               <td>{score.score * 1000}</td>
+              <td>{score.match.substring(4,5)}</td>
             </tr>
           ))}
         </tbody>

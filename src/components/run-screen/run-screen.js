@@ -10,7 +10,7 @@ const RunScreen = () => {
     const [timer, setTimer] = useState(30);
     const [playerScore, setPlayerScore] = useState(0);
     const [cpuScore, setCpuScore] = useState(0);
-    const [gameResult, setGameResult] = useState('');
+    const [gameResult, setGameResult] = useState('Win The Most Rounds In 30 Seconds');
     const [gameOver, setGameOver] = useState(false);
     const [scoreList, setScoreList] = useState([]);
     const [damage, setDamage] = useState(false);
@@ -21,11 +21,13 @@ const RunScreen = () => {
     // const [showAudioControls, setShowAudioControls] = useState('hidden-audio-controls');
     const [isMuted, setIsMuted] = useState(false);
     const [battleGIF, setBattleGIF] = useState(tieGIF);
+    const [playerMoveText, setPlayerMoveText] = useState('Your Move');
+    const [cpuMoveText, setCpuMoveText] = useState('CPU Move');
     const timerRef = useRef(null);
     const audioRef = useRef(null);
 
     const updateScoreList = () => {
-        setScoreList([...scoreList, playerScore])
+        setScoreList([...scoreList, playerScore, matchDecision])
     }
 
     ///Music player activator && audio btn
@@ -103,26 +105,35 @@ const RunScreen = () => {
 
     ///match LOGIC && damage triggger && comment trigger
     const moves = ['rock', 'paper', 'scissors'];
+
     const rpsMatch = (playerMove) => {
         const cpuMove = moves[Math.floor(Math.random() * 3)];
 
         if (playerMove === cpuMove) {
             setGameResult(<h5 className='tie-comment'>{randomTieComment}</h5>)
             setBattleGIF(tieGIF);
+            setPlayerMoveText(<i className='move-tie'>{playerMove}</i>);
+            setCpuMoveText(<i className='move-tie'>{cpuMove}</i>);
         } else if (
             (playerMove === 'rock' && cpuMove === 'scissors') ||
             (playerMove === 'paper' && cpuMove === 'rock') ||
             (playerMove === 'scissors' && cpuMove === 'paper')
         ) {
             setPlayerScore(prevScore => prevScore + 1);
+            // setCpuScore(prevScore => prevScore - 1); LOSE POINTS STATE 
             handleHit();
             setGameResult(<h1 className='playerAttackHit'>{randomWinComment}</h1>)
             setBattleGIF(hitGIF);
+            setPlayerMoveText(<b className='player-move-win'>{playerMove.toUpperCase()}</b>);
+            setCpuMoveText(<i className='cpu-move-loss'>{cpuMove}</i>);
         } else {
             setCpuScore(prevScore => prevScore + 1);
+            // setPlayerScore(prevScore => prevScore - 1); LOSE POINTS STATE
             handleDamage();
             setGameResult(<h3 className='cpuAttackHit'>{randomLossComment}</h3>)
             setBattleGIF(damageGIF);
+            setPlayerMoveText(<i className='player-move-loss'>{playerMove}</i>);
+            setCpuMoveText(<i className='cpu-move-win'>{cpuMove.toUpperCase()}</i>);
         }
     };
 
@@ -146,7 +157,7 @@ const RunScreen = () => {
     } else if (playerScore < cpuScore) {
         matchDecision = "YOU LOSE!";
     } else {
-        matchDecision = "DRAW!";
+        matchDecision = "YOU TIED!";
     }
 
     ///rematch Btn
@@ -164,6 +175,9 @@ const RunScreen = () => {
         setGameOver(false);
         setRematchEnable(false);
         setBattleGIF(tieGIF);
+        setPlayerMoveText('YOUR MOVE');
+        setCpuMoveText('CPU MOVE');
+        setGameResult('Win The Most Rounds In 30 Seconds')
     }
 
     return (
@@ -183,7 +197,9 @@ const RunScreen = () => {
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <button className='mute-btn btn btn-outline-primary btn' onClick={handleMuteBtn}>{isMuted ? <i class="fas fa-volume-up"></i> : <i class="fas fa-volume-mute"></i>}</button>
+                <button className='mute-btn btn btn-outline-primary btn' onClick={handleMuteBtn}>{isMuted ? <i className="fas fa-volume-up"></i> : <i className="fas fa-volume-mute"></i>}</button>
+                 <div className='player-move-text'>{playerMoveText}</div>
+                 <div className='cpu-move-text'>{cpuMoveText}</div>
                 {/* <button className='audio-btn' onClick={handleAudioButton}>AUDIO</button> */}
                 {!gameOver ? (
                     // Controller
