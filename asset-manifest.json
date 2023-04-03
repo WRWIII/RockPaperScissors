@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/RockPaperScissors/static/css/main.b4882ac5.css",
-    "main.js": "/RockPaperScissors/static/js/main.969c65d0.js",
+    "main.css": "/RockPaperScissors/static/css/main.2c3afd61.css",
+    "main.js": "/RockPaperScissors/static/js/main.4c1b48a4.js",
     "static/js/787.15230f2c.chunk.js": "/RockPaperScissors/static/js/787.15230f2c.chunk.js",
     "static/media/rpsTheme.mp3": "/RockPaperScissors/static/media/rpsTheme.736ba7679f295736dcd1.mp3",
+    "static/media/rock-icon.png": "/RockPaperScissors/static/media/rock-icon.021fb1f6ec46c4fdacf8.png",
     "static/media/rpsStageTwo.gif": "/RockPaperScissors/static/media/rpsStageTwo.79ad35f667463fc0d779.gif",
     "static/media/gameOverBG.gif": "/RockPaperScissors/static/media/gameOverBG.45306cf81637023777e8.gif",
     "static/media/rpsStageFour.gif": "/RockPaperScissors/static/media/rpsStageFour.87cc1062f844a793175d.gif",
-    "static/media/rock-icon.png": "/RockPaperScissors/static/media/rock-icon.e08e6e7299ab0052bfa4.png",
     "static/media/scissors-icon.png": "/RockPaperScissors/static/media/scissors-icon.c5350da8cbdc151f9e11.png",
     "static/media/megaManDamage.gif": "/RockPaperScissors/static/media/megaManDamage.cd958d19b95851b3bf76.gif",
     "static/media/megaManShoot.gif": "/RockPaperScissors/static/media/megaManShoot.0ba6feb07fc6d6e0fb14.gif",
     "static/media/megaManTie.gif": "/RockPaperScissors/static/media/megaManTie.2030dcfb5365c843db97.gif",
-    "static/media/paper-icon.png": "/RockPaperScissors/static/media/paper-icon.82c091c03d9b7f22d2fd.png",
+    "static/media/paper-icon.webp": "/RockPaperScissors/static/media/paper-icon.efaeda69312f9f9e51ec.webp",
     "index.html": "/RockPaperScissors/index.html",
-    "main.b4882ac5.css.map": "/RockPaperScissors/static/css/main.b4882ac5.css.map",
-    "main.969c65d0.js.map": "/RockPaperScissors/static/js/main.969c65d0.js.map",
+    "main.2c3afd61.css.map": "/RockPaperScissors/static/css/main.2c3afd61.css.map",
+    "main.4c1b48a4.js.map": "/RockPaperScissors/static/js/main.4c1b48a4.js.map",
     "787.15230f2c.chunk.js.map": "/RockPaperScissors/static/js/787.15230f2c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4882ac5.css",
-    "static/js/main.969c65d0.js"
+    "static/css/main.2c3afd61.css",
+    "static/js/main.4c1b48a4.js"
   ]
 }
